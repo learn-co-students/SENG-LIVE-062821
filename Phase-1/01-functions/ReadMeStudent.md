@@ -6,6 +6,7 @@
     - Know how to look up the other console methods 
     - Demonstrate Debugger 
 - Demonstrate a strong understanding of JavaScript functions
+    - function and arrow function syntax
     - Define functions as First-class functions 
     - Invoke functions 
     - Define parameters and pass arguments 
@@ -15,7 +16,6 @@
     - Demonstrate Lexical Scope
     - Understand Hoisting and Context
 - Understand the call stack 
-    - Explain Execution Context 
 
 
 ## JavaScript First-class Functions  
@@ -23,6 +23,9 @@ JavaScript functions are considered First-class functions because they can be as
 
 ## Higher-order Functions  
 Functions that accept other functions as arguments and/or return a function are Higher-Order functions
+
+## Callbacks 
+Functions that are passed to other functions as arguments 
 
 ## Context
  - global: Code that's not inside any functions.  
