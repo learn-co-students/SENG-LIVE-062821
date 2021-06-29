@@ -42,6 +42,22 @@ const bookStore = {
 
 
 
-console.log(bookStore.inventory.find(books => books.title === 'JavaScript: The Definitive Guide').title)
+//1. Console.log title of the 2nd book
+// console.log(bookStore.inventory[1].title)
+// console.log(bookStore.inventory[2].reviews[1])
+// console.log(bookStore.inventory[3].reorder = true)
 
-console.log(bookStore.inventory.filter(books => books.inventory < 3).map(book => book.title))
+// bookStore.inventory.forEach(element => {
+//     if(element.inventory === 0){
+//         element.reorder = true
+//     }
+// })
+
+let filterArr = bookStore.inventory.filter(book => {
+   return book.inventory === 0
+}).map(book => {
+    book.reorder = true 
+    return book
+})
+console.log(filterArr)
+

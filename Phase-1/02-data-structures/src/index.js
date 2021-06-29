@@ -39,32 +39,119 @@ const bakery = {
     ]
 }
 
-// Objects
+// Objects -----------------------------------
+//Create 
+//how to create objects
+    let obj = {
+        name:'rose',
+        age: 9
+    }
 // Read Values
+    console.log(bakery.store)
+    console.log(bakery["store"])
+    console.log(Object.keys(bakery))
+    console.log(Object.values(bakery))
+    console.log(Object.entries(bakery))
 
-//Create properties (key:value) 
+//Update properties (key:value) 
+//add a property
+    bakery.address = '999 9th Seattle Wa 9999999'
+    bakery["address"] = '999 9th Seattle Wa 9999999'
 
-//Update Values 
- 
-//Delete Values and keys in objects
+//update a property
+    bakery.store = 'FlatironBakes'  
 
-//Arrays
+//remove property 
+    delete bakery.address
+
+
+//Arrays-----------------------------
+//Create arrays
+    let arr = [1,2,3]
+
 //Read elements
-//Update elements
-//Delete elements
+    // console.log(bakery.orders[0].ingredients[0])
 
-//Loop Through object
+//Update elements
+    //add elements
+    //remove elements
+    let cakeObj =    {
+        id: 22,
+        flavor: 'Vanilla',
+        size: '6" cake',
+        amount: 4,
+        price: 40.00,
+        ingredients: ["buttermilk", " vanilla extract", "eggs", "sugar", "butter", "baking soda", "baking powder", "flour"]
+    }
+    bakery.orders.push(cakeObj)
+    bakery.orders.pop()
+    //shift
+    //unshift
+    //slice
+    //splice
+    //bakery.orders[8] = 'hi'
+    // console.log(bakery)
 
 //Loop Through Array 
-    //How can we debug the loop by stopping the code in place?
-
-//forEach
-        //How can we debug the loop by stopping the code in place?
-
-
-//map
-
-//filter/find
+function loopThroughArray(array){
+    for(let i = 0; i < array.length; i++){
+        console.log(array[i])
+    }
+}
+//loopThroughArray(bakery.orders)
 
 
+//forEach ------------------------------------
+//Loops through every element in the array
+//performs the function passed as a callback on every element 
+//returns undefined 
+    bakery.orders.forEach((cakeOrder) => console.log(cakeOrder.price))
+
+    let forEachArray = bakery.orders.forEach(cakeOrder => console.log(cakeOrder.price))   
+    console.log(forEachArray)
+//map -------------------------------------
+//Loops through every element in the array, 
+//performs the function passed as a callback on every element and transforms that element
+//returns a new array of transformed elements
+  let bakeryArr =  bakery.orders.map(cakeOrder => {
+      console.log(cakeOrder)
+      cakeOrder.price = Math.floor(cakeOrder.price/2)
+        return cakeOrder
+  })
+  
+  console.log(bakeryArr)
+
+//filter/find-------------------------------
+//Loops through every element in the array, 
+//performs the function passed as a callback on every element and returns true or false
+//returns a new array of all the elements that returned true
+//find will return the first element that returns true
+    let filterBooksArray = bakery.orders.filter(cakeOrder => {
+        return cakeOrder.price < 40
+    })
+
+    console.log(filterBooksArray)
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+//Warmup---------------
+// const firstFunction = () =>{
+//     return 1+1
+// }
+
+// function secondFunction(cb){
+//     console.log(cb)
+//     return cb()
+// }
 

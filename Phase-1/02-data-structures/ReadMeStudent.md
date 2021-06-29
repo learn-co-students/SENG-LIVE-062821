@@ -18,21 +18,29 @@
         - Object.entries()
         - Iterate through Object
      
-- Understand how to use loops
-    - for statement, loop, of, in
-    - while statement
-    - break statement
-
         
-- Use conditional statements
-    - if statements
-    - if…else statement
-    - Ternary operator
-
 - Demonstrate a strong understanding of JavaScript functions
     - Define functions as First-class functions 
     - Invoke functions 
     - Define parameters and pass arguments 
+    - forEach
+    - map
+    - find/filter
+
+## Data Structures 
+![Stacks](assets/stack.png)
+![Trees](assets/tree.png)
+
+```
+//Arrays
+[1,2,3,4]
+
+
+//Objects/Hashes
+{name:'rose', age:9}
+
+```
+
 
 ## JavaScript First-class Functions  
 JavaScript functions are considered First-class functions because they can be assigned to a variable as a value, passed as arguments, be returned functions, stored in other data structures and have properties and methods.
