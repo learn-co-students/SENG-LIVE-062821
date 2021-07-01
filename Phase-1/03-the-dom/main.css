@@ -1,0 +1,127 @@
+/* mini reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* layout */
+body {
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  font-size: 14px;
+  transition: all 0.2s;
+  background-color: #fff8e7;
+
+}
+h1{
+  font-size: 40px;
+}
+aside{
+  background-color: rgb(219, 215, 215);
+  color: #fff;
+  padding: 2rem;
+  font-size: 20px;
+
+}
+aside h1{
+  font-size: 30px;
+}
+aside ul li {
+  list-style: none;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* menu */
+#menu {
+  padding: 0.5rem;
+  background-color: #4aa4c7;
+  color: #fff;
+}
+
+/* forms */
+#book-form {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+}
+
+#book-form input,
+#book-form textarea {
+  width: 100%;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+#book-form input[type="submit"] {
+  margin: 1em 0 0 0;
+  width: auto;
+}
+
+/* cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  background-color: #fff;
+  animation: enter 0.25s ease-out;
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes enter {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .content {
+  padding: 1rem 0.5rem;
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+/* buttons */
+button {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.75em 1.5em;
+  background-color: #4ac751;
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
