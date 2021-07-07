@@ -78,4 +78,4 @@ playEpisode(episodeIntro, hostIntro, 'one', 'how functions work', 'rose')
 //block scope
 
 
-    
+'hi'
