@@ -28,12 +28,35 @@ function renderSinglePokemon(pokemon){
   document.querySelector('#pokemon-container').append(divContainer)
 }
 
+function renderPokemonDetail(pokemon){
+  console.log(pokemon)
+  return (`
+    <div class="pokemon-card" id=${pokemon.id}> 
+      <div class="pokemon-frame">
+        <h1>${pokemon.id}: ${pokemon.name}</h1>
+        <div class="pokemon-image">
+        <img class="toggle-sprite" src="${pokemon.sprites.front}">
+        <img class="toggle-sprite" src="${pokemon.sprites.back}">
+        </div>
+        <div>
+          <p id="type">Types: ${pokemon.types.join(' ')}</p>
+          <p id="height" >Height: ${pokemon.height}</p>
+          <p id="weight">Weight: ${pokemon.weight}</p>
+          <p id="abilities"> Abilities: ${pokemon.abilities.join(' ')}
+          <p id="moves-list"> Moves: ${pokemon.moves.join(' ')}
+          <form>
+            <input type="text" id="moves" name="moves">
+            <input type="submit" value="add moves">
+          </form>
+        </div>
+      </div>
+    </div>
+  `)
+}
+
 //GET Requests ------------------------------------------------------
 //GET All
 function fetchAllPokemon(){
-  //Should Fetch all pokemon from our json-server
-  //Should handle a promise
-  //Should render the return data to the page
   fetch('http://localhost:3000/pokemon')
   .then(res => res.json())
   .then(json => json.forEach(renderSinglePokemon))
@@ -41,14 +64,19 @@ function fetchAllPokemon(){
 }
 
 //GET One
-//Should take an id as a parameter 
-//Should make Get request Fetching a single animal from our json-server
-//Should handle a promise
-//Should render that pokemon to the page and remove the other pokemon
 function showPokemon(id){
   console.log(id)
   fetch(`http://localhost:3000/pokemon/${id}`)
   .then(res => res.json())
-  .then(json => console.log(json))
+  .then(json => {
+    document.querySelector('#pokemon-container').innerHTML =  renderPokemonDetail(json)
+
+    document.querySelector('#pokemon-container form').addEventListener('submit', (event) => {
+      event.preventDefault()
+      json.moves.push(event.target.moves.value)
+      document.querySelector('#moves-list').textContent = json.moves.join(' ')
+    })
+
+  })
 }
 
