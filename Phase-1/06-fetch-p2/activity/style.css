@@ -1,0 +1,15 @@
+body{
+    background-color:rgb(50, 49, 49);
+    color: whitesmoke;
+
+}
+li{
+    list-style: none;
+}
+main{
+    text-align: center;
+
+}
+footer{
+    text-align: center;
+}
