@@ -1,0 +1,16 @@
+{
+    "starwars": [
+        {
+            "id":1,
+            "name": "Luke Skywalker",
+            "height": "172",
+            "mass": "77",
+            "hair_color": "blond",
+            "eye_color": "blue",
+            "birth_year": "19BBY",
+            "gender": "male",
+            "homeworld": "https://swapi.dev/api/planets/1/",
+            "films": ["A New Hope", "The Empire Strikes Back", "Return of the Jedi", "Revenge of the Sith"]
+        }
+    ]
+}
