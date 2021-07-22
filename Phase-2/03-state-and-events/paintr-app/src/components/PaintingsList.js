@@ -1,8 +1,6 @@
-import React from 'react';
 import Painting from './Painting';
 
 function PaintingsList(props) {
-
   return (
     <div>
       <h1>Paintings</h1>
