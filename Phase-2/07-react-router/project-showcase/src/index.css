@@ -1,0 +1,304 @@
+:root {
+  --turquoise: #00efe1;
+  --mid-turquoise: #14d5c9;
+  --dark-turquoise: #00333f;
+  --black: #030416;
+  --white: #fff;
+  --grey: #d6e2e7;
+  --dark-grey: #7f8a8e;
+  --yellow: #f9c51a;
+  --orange: #ff5c00;
+  --fuschia: #e80352;
+  --blue: #338fff;
+  --blue-dark: #145cb3;
+  --purple: #cda2ff;
+  --green: #00ef7c;
+  --color: var(--white);
+  --background: var(--black);
+  --primary: var(--turquoise);
+}
+
+/* layout */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: var(--color);
+  background-color: var(--background);
+}
+
+.App {
+  color: var(--color);
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.App.light {
+  --color: var(--black);
+  --background: var(--white);
+  --primary: var(--mid-turquoise);
+}
+
+section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* buttons */
+.button,
+button {
+  padding: 0.75rem;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  color: var(--primary);
+  background-color: var(--background);
+  border: 2px solid var(--dark-turquoise);
+  transition: background-color 0.2s;
+  line-height: 1;
+}
+
+.button.active,
+.button:hover,
+button.active,
+button:focus,
+button:hover {
+  outline: none;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color: var(--dark-grey);
+  background-color: var(--grey);
+}
+
+button.blue {
+  border: 2px solid var(--blue-dark);
+  color: var(--blue);
+}
+
+button.blue.active,
+button.blue:focus,
+button.blue:hover {
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+/* inputs */
+input,
+textarea,
+select {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  font: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 2px solid var(--color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid var(--primary);
+}
+
+/* links */
+a,
+.more-link {
+  color: var(--color);
+  border-bottom: 1px solid var(--color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+.more-link:hover {
+  background-color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.more-link:hover::after {
+  content: " ➡";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-bottom: 2px solid var(--dark-turquoise);
+}
+
+span[role="img"] {
+  color: transparent;
+  text-shadow: 0 0 0 var(--color);
+}
+
+.box {
+  border: 2px solid var(--dark-turquoise);
+  padding: 1.75rem;
+}
+
+/* header */
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+header h1 {
+  margin: 0;
+  cursor: pointer;
+}
+
+header h1 a {
+  border-bottom: none;
+}
+
+header h1 a:hover {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.logo {
+  color: var(--turquoise);
+  font-size: 1.25em;
+  font-family: Helvetica;
+  margin-right: 0.5rem;
+}
+
+header nav > * {
+  margin: 0 0.5rem;
+}
+
+/* forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.form h3 {
+  margin-bottom: 1rem;
+}
+
+.form button[type="submit"] {
+  width: 50%;
+  cursor: pointer;
+}
+
+.form .error {
+  color: var(--fuschia);
+  margin-bottom: 1rem;
+}
+
+/* Filter */
+.phase-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.phase-buttons button {
+  margin: 0 1rem;
+}
+
+/* cards */
+.cards {
+  margin: 0 auto;
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  border: 2px solid var(--dark-turquoise);
+}
+
+.card .details {
+  margin: 0.5rem;
+}
+
+.details p {
+  margin: 0.5rem 0;
+}
+
+.project-image {
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.project-image .claps {
+  color: transparent;
+  text-shadow: 0 0 0 var(--turquoise);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.project-image .claps:focus,
+.project-image .claps:hover {
+  color: transparent;
+  text-shadow: 0 0 0 var(--color);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+}
+
+.badge.blue {
+  background-color: var(--blue);
+  border: 2px solid var(--blue-dark);
+  color: var(--white);
+}
+
+/* project detail */
+.project-detail {
+  display: flex;
+  width: 800px;
+  max-width: 90vw;
+}
+
+.project-detail .details {
+  flex: 1;
+  margin-left: 1rem;
+}

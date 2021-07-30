@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Yourseum",
+      "about": "Find great art",
+      "phase": 4,
+      "link": "https://yourseum.netlify.app",
+      "image": "https://i.imgur.com/yywQCoi.png"
+    },
+    {
+      "id": 2,
+      "name": "Spreddit",
+      "about": "A Global Community of Like Minded Humans Socially Distancing ",
+      "phase": 4,
+      "link": "https://spreddit.netlify.app",
+      "image": "https://i.imgur.com/cyZCpWs.png"
+    },
+    {
+      "id": 3,
+      "name": "snackATTACK",
+      "about": "It's Time to Discover",
+      "phase": 3,
+      "link": "https://snackattack.netlify.app",
+      "image": "https://i.imgur.com/VTJB4qy.png"
+    },
+    {
+      "id": 10,
+      "name": "YouTravel",
+      "about": "YouTube for Travel Videos",
+      "phase": 3,
+      "link": "https://youtravel.netlify.app/",
+      "image": "https://i.imgur.com/Y6mlORn.png"
+    },
+    {
+      "id": 12,
+      "name": "Breathe",
+      "about": "Meditation",
+      "phase": 3,
+      "link": "https://github.com/maifam/breathe_frontend",
+      "image": "https://i.imgur.com/hAuKx3K.png"
+    },
+    {
+      "id": 13,
+      "name": "HomeStory",
+      "about": "A web app for storing info about furniture items you plan on purchasing in the future or simply just want to keep tabs of.",
+      "phase": 3,
+      "link": "https://homestory.netlify.app",
+      "image": "https://i.imgur.com/il8ft21.png"
+    },
+    {
+      "id": 14,
+      "name": "Locksley To Do",
+      "about": "A todo list and calendar app",
+      "phase": 4,
+      "link": "https://www.locksleyr.com",
+      "image": "https://i.imgur.com/XOnaclL.png"
+    },
+    {
+      "id": 15,
+      "name": "GamesRx",
+      "about": "Game info and reviews",
+      "phase": 4,
+      "link": "https://gamesrx.netlify.app",
+      "image": "https://i.imgur.com/Japzh6v.png"
+    }
+  ]
+}
