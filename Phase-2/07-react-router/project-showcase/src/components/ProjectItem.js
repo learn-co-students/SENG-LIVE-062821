@@ -8,14 +8,19 @@ function ProjectItem({ project }) {
   // Pull ID of Project from props and
   // create appropriate URL using it
   const src = `/projects/${project.id}`
-  
-  const [claps, setClaps] = useState(0);
+
+  //  Save Claps via localStorage (START)
+
+  const [claps, setClaps] = useState(parseInt(localStorage.getItem(`claps-${project.id}`)) || 0);
 
   const { image, name, about, phase } = project;
 
   function handleClapClick() {
     setClaps(claps + 1);
+    localStorage.setItem(`claps-${project.id}`, claps + 1)
   }
+
+  //  Save Claps via localStorage (END)
 
   return (
     <li className="card">
