@@ -1,4 +1,4 @@
-# Intro to Object Oriented Ruby
+# Object Orientation in Ruby part 1
 ## 1st Segment - Review of OO basics
 
 Review of classes vs instances
