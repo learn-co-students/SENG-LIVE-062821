@@ -101,7 +101,7 @@ RSpec.describe "Examples" do
         describe "#back_up" do 
           it "backs up the computer and stores the current time as the last_backed_up_at time" do 
             computer.back_up
-            expect(computer.instance_variable_get("@last_backed_up_at").strftime("%m-%e-%y %H:%M")).to eq(@time.strftime("%m-%e-%y %H:%M"))
+            expect(computer.instance_variable_get("@last_backed_up_at")).to eq(@time.strftime("on %m/%d/%y at %H:%M"))
           end
         end
     
@@ -141,8 +141,8 @@ RSpec.describe "Examples" do
           end
         end
 
-        describe ".create(attributes)" do 
-          it "accepts a hash of attributes, creates a new computer, saves it and returns it" do 
+        describe ".create(brand, screen_size, model_name, model_year)" do 
+          it "accepts a series of attributes as arguments, creates a new computer with those attributes, saves it and returns it" do 
             mac = Computer.create(
               "Apple", 
               24.0, 

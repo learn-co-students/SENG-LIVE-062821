@@ -44,19 +44,17 @@ class Computer
   end
 
   def back_up
-    @last_backed_up_at = DateTime.now
-  end
-
-  def last_backed_up_at
-    (@last_backed_up_at && @last_backed_up_at.strftime("on %m/%d/%y at %H:%M")) || "never"
+    @last_backed_up_at = DateTime.now.strftime("on %m/%d/%y at %H:%M")
   end
 
   def about_this_computer
-    "This computer is a #{@model_year} #{@brand} #{@model_name} with a #{@screen_size} inch screen. It was last backed up #{last_backed_up_at}"
+    "This computer is a #{@model_year} #{@brand} #{@model_name} with a #{@screen_size} inch screen. It was last backed up #{@last_backed_up_at}"
   end
 end
 
-# create and return the first computer within this method
+# refactor these so that they still work after you add the initialize method
+
+# create and return a computer with the same 4 attributes assigned (you can use whatever values you like as long as they're the correct type)
 def first_computer
   computer = Computer.new
   computer.brand = "Apple"
@@ -66,7 +64,7 @@ def first_computer
   computer
 end
 
-# create and return the second computer within this method
+# create and return a computer with the same 4 attributes assigned (you can use whatever values you like as long as they're the correct type)
 def second_computer
   computer = Computer.new
   computer.brand = "Apple"

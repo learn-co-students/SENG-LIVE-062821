@@ -68,11 +68,11 @@ class Computer
   end
 
   def back_up
-    @last_backed_up_at = DateTime.now
+    @last_backed_up_at = DateTime.now.strftime("on %m/%d/%y at %H:%M")
   end
 
   def last_backed_up_at
-    (@last_backed_up_at && @last_backed_up_at.strftime("on %m/%d/%y at %H:%M")) || "never"
+    @last_backed_up_at || "never"
   end
 
   def about_this_computer
