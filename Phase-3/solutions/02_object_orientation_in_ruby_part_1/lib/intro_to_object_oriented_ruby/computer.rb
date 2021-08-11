@@ -56,6 +56,10 @@ class Computer
   end
 end
 
+def functional_about_this_computer(model_year, brand, model_name, screen_size, last_backed_up_at)
+  "This computer is a #{model_year} #{brand} #{model_name} with a #{screen_size} inch screen. It was last backed up #{last_backed_up_at}"
+end
+
 # create and return the first computer within this method
 def first_computer
   computer = Computer.new

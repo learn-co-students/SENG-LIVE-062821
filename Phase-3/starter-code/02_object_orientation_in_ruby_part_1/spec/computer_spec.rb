@@ -73,7 +73,7 @@ RSpec.describe "Examples" do
       # end
 
       describe "#about_this_computer" do 
-        it "returns a hash containing information about the computer" do 
+        it "returns a string containing information about the computer" do 
           computer = Computer.new
           computer.back_up
           computer.brand = "Apple"
