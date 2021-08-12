@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require_relative "../lib/object_oriented_ruby_continued"
+
+seed_computers
+
+require "irb"
+IRB.start(__FILE__)
