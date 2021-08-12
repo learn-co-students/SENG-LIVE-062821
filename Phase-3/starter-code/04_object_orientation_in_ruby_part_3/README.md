@@ -7,6 +7,13 @@ Overview:
 [HackMD Lecture Notes]()
 ## 1st Segment - Mass Assignment and Private Methods
 
+To get started with today's codebase run the following commands from a new attached terminal in VSCode:
+
+```bash
+git pull
+code Phase-3/starter-code/04_object_orientation_in_ruby_part_3/
+```
+
 Let's start off with the Dog class we had from yesterday
 
 ```rb
