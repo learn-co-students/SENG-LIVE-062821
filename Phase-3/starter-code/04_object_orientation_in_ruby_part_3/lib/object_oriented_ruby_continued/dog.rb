@@ -5,13 +5,11 @@ class Dog
     @@all
   end
 
-  def self.create(name:, age:, breed:)
+  def self.create(name, age, breed)
     dog = self.new(name, age, breed)
     dog.save
     dog
   end
-
-  attr_reader :name, :age, :breed
 
   def initialize(name:, age:, breed:)
     @name = name
@@ -24,30 +22,38 @@ class Dog
     @@all << self
   end
 
-  def walk
-    if needs_to_poop?
-      poop
-      puts "#{name} pooped"
-    end
+  def name
+    @name
   end
 
-  private
-
-  def needs_to_poop?
-    @last_pooped_at.nil? || @last_pooped_at < (DateTime.now - 6.hours)
+  def age
+    @age
   end
+
+  def breed
+    @breed
+  end
+
+  def walk 
+    poop if needs_to_poop?
+  end
+
+  private 
 
   def poop
+    puts "#{name} pooped"
     @last_pooped_at = DateTime.now
+  end
+
+  def needs_to_poop?
+    binding.pry
+    @last_pooped_at.nil? || @last_pooped_at < 6.hours.ago
   end
 
 end
 
-
-
 @lennon = Dog.new(name:"Lennon Snow", age: "11 months", breed: "Pomeranian")
 
-# binding.pry
 puts @lennon.name
 
 puts @lennon.age

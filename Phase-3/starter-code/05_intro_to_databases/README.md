@@ -31,6 +31,7 @@ Now exit `./bin/console` and check out `Dog.all` again.
 
 Why might this be a problem? Let’s say you’re working for Facebook and a user creates an instance of a profile. What problem do you see with the fact that the program will need to rerun the code in order for the user to continue to access that profile every time they enter the app? 
 
+If the data is not persisted, then our users will have to do everything from scratch.
 ...
 
 Labs have introduced the idea of rows and columns within a database table and we've also introduced SQL, but we haven't discussed how the structure and characteristics of a database support our application code.
@@ -53,7 +54,7 @@ Why did we choose the types that we did here?
 - Basic Analogy between Object Oriented code and Databases
 - Benefits and challenges introduced by databases
 
-
+![analogy](./analogy.png)
 ## Part 2 - Relational Databases and the One to Many Relationship
 
 - Related data

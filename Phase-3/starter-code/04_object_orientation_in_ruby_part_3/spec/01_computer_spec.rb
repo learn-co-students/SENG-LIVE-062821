@@ -87,7 +87,7 @@ RSpec.describe "Examples" do
         describe "#back_up" do 
           it "backs up the computer and stores the current time as the last_backed_up_at time" do 
             computer.back_up
-            expect(computer.instance_variable_get("@last_backed_up_at").strftime("%m-%e-%y %H:%M")).to eq(@time.strftime("%m-%e-%y %H:%M"))
+            expect(computer.instance_variable_get("@last_backed_up_at")).to eq(@time.strftime"on %m/%d/%y at %H:%M")
           end
         end
     
