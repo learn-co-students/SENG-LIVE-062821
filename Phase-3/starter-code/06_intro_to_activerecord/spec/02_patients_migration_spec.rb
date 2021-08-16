@@ -11,12 +11,12 @@ RSpec.describe "Patients Migration Spec" do
         birthday: :date,
         last_visited_on: :datetime,
         insurance_provider: :string,
-        is_insured: :datetime,
+        is_insured: :boolean,
         is_alive: :boolean,
         is_organ_donor: :boolean
       }.each do |column_name, type|
         column = columns.find{|c| c.name == column_name.to_s}
-        expect(column).not_to be_nil
+        expect(column).not_to be_nil, "#{column_name} is not defined"
         expect(column.sql_type_metadata.type).to eq(type)
       end
     end

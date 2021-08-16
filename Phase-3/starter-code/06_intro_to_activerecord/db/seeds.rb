@@ -2,56 +2,56 @@ dogs_attributes = [
   
   {
     name: "Olivia",	
-    birthday: Date.new(2018, 03, 31),
+    birthdate: Date.new(2018, 03, 31),
     breed:	"Terrier",
     image_url: "https://i.imgur.com/zx6CPsp_d.webp?maxwidth=640&shape=thumb&fidelity=medium",
     last_pooped_at: 1.hour.ago
   },
   {
     name: "Molly",	
-    age: Date.new(2019,06, 21),
+    birthdate: Date.new(2019,06, 21),
     breed:	"Terrier / Chihuahua",
     image_url: "https://ibb.co/NVq44CK",
     last_pooped_at: 3.hours.ago
   },
   {
     name: "CJ",	
-    age: Date.new(2016, 8, 13),
+    birthdate: Date.new(2016, 8, 13),
     breed:	"German shepard/shibainu",
     image_url: "blob:https://imgur.com/4f93cf03-50cf-4037-be44-23df24b43d5c",
     last_pooped_at: 7.hours.ago
   },
   {
     name: "Kaya",	
-    age: Date.new(2017, 9, 27),
+    birthdate: Date.new(2017, 9, 27),
     breed:	"Blueheeler",
     image_url: "https://scontent.fapa1-2.fna.fbcdn.net/v/t1.18169-9/21762207_10212937843515095_6836989904941765671_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=cdbe9c&_nc_ohc=d1fqbEnFq5QAX-4Lkf9&_nc_ht=scontent.fapa1-2.fna&oh=f0b2d77c14ba93b5e0f143f12267a7cc&oe=612849B7",
     last_pooped_at: 4.hours.ago
   },
   {
     name: "Frankie",	
-    age: Date.new(2020, 10, 27),
+    birthdate: Date.new(2020, 10, 27),
     breed:	"Boxer Mix",
     image_url: "https://ibb.co/3SC5RfP",
     last_pooped_at: 8.hours.ago
   },
   {
     name: "Olivia",	
-    age: Date.new(2018, 03, 12),
+    birthdate: Date.new(2018, 03, 12),
     breed:	"Terrier",
     image_url: 	"https://i.imgur.com/zx6CPsp_d.webp?maxwidth=640&shape=thumb&fidelity=medium",
     last_pooped_at: 2.hours.ago
   },
   {
     name: "Chop",	
-    age: Date.new(2020, 7, 31),
+    birthdate: Date.new(2020, 7, 31),
     breed:	"German Shorthaired Pointer",
     image_url: "https://www.pets4homes.co.uk/images/classifieds/2015/10/29/1121968/large/liver-gsp-dog-pup-563218eef01c1.jpeg",
     last_pooped_at: 3.hours.ago
   },
   {
     name: "Baron",	
-    age: Date.new(2012, 12, 23),
+    birthdate: Date.new(2012, 12, 23),
     breed:	"GSD/English Lab mix",
     image_url: "https://www.icloud.com/photos/#0XPBFbIkWAmF3R5xGYVm-Q0sQ",
     last_pooped_at: 5.hours.ago

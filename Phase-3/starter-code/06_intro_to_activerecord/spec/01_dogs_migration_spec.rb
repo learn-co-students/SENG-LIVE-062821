@@ -8,7 +8,7 @@ RSpec.describe "Dogs Migration Spec" do
       columns = Dog.columns
       {
         name: :string,
-        birthday: :date,
+        birthdate: :date,
         breed: :string,
         image_url: :string,
         last_pooped_at: :datetime

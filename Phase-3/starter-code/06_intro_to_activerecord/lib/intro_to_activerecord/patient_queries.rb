@@ -23,6 +23,7 @@ end
 def find_patient_by_name(patient_name)
   
 end
+
 # Delete a patient matching the id passed as an argument
 def delete_patient_by_id(patient_id)
  
