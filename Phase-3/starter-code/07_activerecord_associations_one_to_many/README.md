@@ -22,7 +22,9 @@
 ## Topics
 
 ### What is the difference between a primary key and a foreign key?
-
+- primary key is an id, foreign_key is an id of a row in another table.
+- primary key is auto-assigned
+- foreign key is manually assigned by our code.
 ...
 ### If we have a one to many relationship between two tables, which table gets the foreign key?
 
