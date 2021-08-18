@@ -213,11 +213,15 @@ patients_attributes.map do |attributes|
   Patient.find_or_create_by(attributes)
 end
 
+@drew = Doctor.find_or_create_by(name: "Dr. Drew", specialization: "Addiction Medicine", hospital: "TV")
+@phil = Doctor.find_or_create_by(name: "Dr. Phil", specialization: "Psychology", hospital: "TV")
+
 appointments_attributes = (0..180).to_a.map do |i|
   hash = {}
   num = rand(48)
   hash[:starts_at] = [num.hours.ago, num.hours.from_now].sample
   hash[:patient_id] = Patient.pluck(:id)[i%18]
+  hash[:doctor_id] = [@drew, @phil].sample.id
   hash[:no_show] = hash[:starts_at] > DateTime.now ? nil : [true, false].sample
   hash
 end
