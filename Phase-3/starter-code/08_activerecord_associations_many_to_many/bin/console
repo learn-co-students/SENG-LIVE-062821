@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require_relative "../lib/activerecord_associations_many_to_many"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+# require "pry"
+# Pry.start
+
+# @dog = Dog.find_or_create_by(name: "Lennon Snow", birthdate: Date.new(2020, 8, 31), breed: "Pomeranian", last_pooped_at: 3.hours.ago)
+# @other_dog = Dog.find_or_create_by(name: "Gigi", birthdate: Date.new(2016, 7, 11), breed: "Shih Tzu", last_pooped_at: 3.hours.ago)
+# @walk_3_hours_ago = Walk.find_or_create_by(time: 3.hours.ago)
+# @walk_5_hours_ago = Walk.find_or_create_by(time: 5.hours.ago)
+# @walk_yesterday = Walk.find_or_create_by(time: 1.day.ago)
+# @other_dog_walk = @other_dog.dog_walks.find_or_create_by(walk: @walk_3_hours_ago, pooped: true)
+# @yesterday_dog_walk = @dog.dog_walks.find_or_create_by(walk: @walk_yesterday, pooped: true)
+# @dog_walk_with_no_poop = @dog.dog_walks.find_or_create_by(walk: @walk_5_hours_ago, pooped: false)
+# @dog_walk_with_poop = @dog.dog_walks.find_or_create_by(walk: @walk_3_hours_ago, pooped: true)
+
+
+require "irb"
+IRB.start(__FILE__)
