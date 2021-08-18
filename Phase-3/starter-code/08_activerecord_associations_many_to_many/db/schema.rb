@@ -10,24 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_183813) do
-
-  create_table "appointments", force: :cascade do |t|
-    t.datetime "starts_at"
-    t.integer "patient_id"
-    t.integer "doctor_id"
-    t.text "notes"
-    t.boolean "no_show"
-    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
-    t.index ["patient_id"], name: "index_appointments_on_patient_id"
-  end
-
-  create_table "doctors", force: :cascade do |t|
-    t.string "name"
-    t.string "specialization"
-    t.string "hospital"
-    t.boolean "gives_lollipop", default: false
-  end
+ActiveRecord::Schema.define(version: 2021_08_16_170800) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"

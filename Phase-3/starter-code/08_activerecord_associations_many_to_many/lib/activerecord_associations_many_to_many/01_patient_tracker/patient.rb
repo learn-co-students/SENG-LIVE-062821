@@ -1,6 +1,5 @@
 class Patient < ActiveRecord::Base
   has_many :appointments
-  has_many :doctors, -> { distinct }, through: :appointments
 
   def no_shows
     appointments.no_shows
