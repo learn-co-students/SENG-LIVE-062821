@@ -8,10 +8,6 @@
 
 ---
 
-- Part 1 - Understand Many to Many pattern and apply it to Patient Tracking Application (with me)
-- Part 2 - Apply Many to Many pattern to Dog walking application
-- Part 3 - Use association methods in the console to create relationships between instances
-
 ## Important Resources for Today
 - [Reference guide for migrations to update existing tables](https://api.rubyonrails.org/v5.2.6/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html)
 - [Reference guide for creating new tables (what you can do with the |t|)](https://api.rubyonrails.org/v5.2.6/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html)
@@ -37,21 +33,35 @@
 ...
 ## Help me build this out
 
-Say we want our Patient Tracker application to be able to handle the situation where our office has multiple doctors that patients can book appointments with. In this case, we'll have to consider the following questions:
+Say we want our dog walking application to be able to handle the situation where a dog walker walks multiple dogs at the same time. In this case, we'll have to consider the following questions:
 1. how will our database have to change?
 2. how will our models have to change?
 
-- Make sure our database tables are set up to support the relationships we need
-- Create a many to many relationship between `Doctor` and `Patient` through `Appointment`
-- run `rake db:seed` to create some seed data
-- open up `./bin/console` and create a couple of Doctors and add appointments to them
+- Create a many to many relationship between `Dog` and `Walk`
+- open up `./bin/console` and create a couple of dogs and a couple of walks and then associate the two.
 
-```rb
-@drew = Doctor.find_or_create_by(name: "Dr. Drew", specialization: "Addiction Medicine", hospital: "TV")
-@phil = Doctor.find_or_create_by(name: "Dr. Phil", specialization: "Psychology", hospital: "TV")
 
-# make appointments with this doctor and try out association methods 
-```
+
+## Segment 2 - Task: Apply has_many, through
+
+For our patient tracking application, we want to allow multiple doctors to work in the same office. Our users should be able to:
+- see a list of all of the patients
+- see a list of all of the doctors
+- see a list of all of the appointments
+- see all of a particular patient's appointments
+- see all of a particular doctor's appointments
+- see all of a particular patient's appointments with a particular doctor
+- see all of a particular doctor's appointments with a particular patient
+
+To do that, we'll discovered that we actually need to set up a many to many relationship and utilize the `has_many, through` macro.
+
+1. In `lib/technician.rb`, create a `Technician` class that inherits from `ActiveRecord::Base`
+
+2. Add relationships between `Technician` and our `Issue` and `Computer` models.
+
+3. Run the tests to ensure that the relationships are properly established.
+
+4. Enter `./bin/console` and create a couple of computers, a couple of technicians and a couple of issues. Use Sqlite Explorer to check your database to ensure the appropriate records are created.
 
 ### Discussion Questions
 #### How many macros are involved in implementing the many to many relationship and where do they go? 
@@ -62,32 +72,9 @@ Say we want our Patient Tracker application to be able to handle the situation w
 
 ...
 
+## Group Discussion
 
-## Segment 2 - Task: Apply has_many, through
-
-For our dog walking tracking application, we want to allow multiple dogs to go on the same walk. Our users should be able to:
-
-
-To do that, we'll discovered that we actually need to set up a many to many relationship and utilize the `has_many, through` macro. We'll also need to make sure that our database can support these relationships.
-To start, there will only be the dogs table created for you, so you'll need to add migrations for the 2 other required tables: `dog_walks` and `walks`, the required columns and types are visible in the test file:
-
-1. Create dog_walks table with appropriate columns
-2. Create walks table with appropriate columns
-3. add association macros for each to ensure associations are set up properly.
-4. Run `rspec` until all tests are passing
-If you have extra time, you can uncomment the specs at the bottom of `spec/01_dog_walker_spec.rb` and work on those.
-
-## Segment 3 - Interacting with Association methods via the console
-
-5. run `rake db:seed`
-6. Enter `./bin/console` and interact with the `Dog` and `Walk` classes, try taking dogs on walks, how do you mark that a dog pooped on a walk? 
-
-### When you take a dog on a walk, which table do you add a row to?
-
-
-
-
-
+Practice building out models and migrations here [Group Discussion](https://hackmd.io/@dlm/phase4-lesson6-activerecord-associations-many-to-many-discussion-72721)
 
 ## Key Takeaways
 
