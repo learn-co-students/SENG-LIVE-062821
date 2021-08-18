@@ -65,11 +65,11 @@ Say we want our Patient Tracker application to be able to handle the situation w
 
 ## Segment 2 - Task: Apply has_many, through
 
-For our dog walking tracking application, we want to allow multiple doctors to work in the same office. Our users should be able to:
+For our dog walking tracking application, we want to allow multiple dogs to go on the same walk. Our users should be able to:
 
 
 To do that, we'll discovered that we actually need to set up a many to many relationship and utilize the `has_many, through` macro. We'll also need to make sure that our database can support these relationships.
-To start, there will only be the patients table created for you, so you'll need to add migrations for the 2 other required tables: `dog_walks` and `walks`, the required columns and types are visible in the test file:
+To start, there will only be the dogs table created for you, so you'll need to add migrations for the 2 other required tables: `dog_walks` and `walks`, the required columns and types are visible in the test file:
 
 1. Create dog_walks table with appropriate columns
 2. Create walks table with appropriate columns
