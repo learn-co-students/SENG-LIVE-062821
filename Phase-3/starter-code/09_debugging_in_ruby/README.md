@@ -121,9 +121,12 @@ banks for the first user in the database based on the seed data; and
 
 - `User#total_balance`
   - returns the total balance for a user based on the sum total of all of their account balances.
+- `User#balance_by_account_type(account_type)`
+  - accepts an `account_type` as an argument (one of these: "Checking", "Savings", "Money Market", "IRA") and returns the total balance that user has invested in that type of account.
+- `User.number_one`
+  - returns _one_ user instance for the user who has the highest total account balances
+**Advanced**
 - `User#main_banks`
   - returns a collection of all the `Bank` instances the user has invested more than $30,000
 - `User#international_funds`
   - returns the total balance the user has in accounts with a bank in another country than their country of residence
-- `User.number_one`
-  - returns _one_ user instance for the user who has the highest total account balances
