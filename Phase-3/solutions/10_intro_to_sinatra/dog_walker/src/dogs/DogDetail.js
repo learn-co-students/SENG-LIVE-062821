@@ -17,7 +17,15 @@ function DogDetail({ dog = {}, dogs, setDogs }) {
   ]);
 
   const handleDelete = async (e) => {
-    
+    e.preventDefault();
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/dogs/${id}`, {
+      method: 'DELETE',
+      headers: { Accept: 'application/json' }
+    });
+
+    const parsedBody = await res.json();
+
+    setDogs(dogs.filter((dog) => dog.id !== parsedBody.id));
   };
 
   return (
@@ -29,9 +37,13 @@ function DogDetail({ dog = {}, dogs, setDogs }) {
           {breed} - {age} old
         </p>
         <div className="grid grid-cols-2 mt-4">
-          
-          <div>{ dog_walks.length} walk(s)</div>
-        
+          <Link
+            to={`/dogs/${id}`}
+            className="text-white bg-green-600 px-4 py-2 flex justify-center"
+          >
+            <FaWalking size={20} />
+            Walks
+          </Link>
           <div className="flex justify-end">
             <Link className="flex items-center mr-2" to={`/dogs/${id}/edit`}>
               <FaPencilAlt size={20} />

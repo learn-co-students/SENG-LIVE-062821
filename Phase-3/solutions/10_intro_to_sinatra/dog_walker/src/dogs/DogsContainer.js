@@ -10,8 +10,17 @@ function DogsContainer() {
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
-    
-   
+    async function fetchDogs() {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/dogs`, {
+        headers: { Accept: 'application/json' }
+      });
+
+      const parsedBody = await res.json();
+
+      setDogs(parsedBody);
+    }
+
+    fetchDogs();
   }, []);
 
   return (

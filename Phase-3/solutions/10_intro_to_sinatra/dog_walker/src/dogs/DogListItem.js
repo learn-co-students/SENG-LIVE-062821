@@ -9,20 +9,21 @@ function DogListItem({
 }) {
   const handleDelete = async (e) => {
     e.preventDefault();
-    
   };
 
   return (
-    <div className="p-4 shadow text-center">
-      <img
-        className="object-cover lg:h-144 w-full"
-        src={image_url}
-        alt={name}
-      />
-      <h1 className="text-2xl my-2">{name}</h1>
-      <p>
-        {breed} - {age} old
-      </p>
+    <div className="p-4 shadow text-center flex flex-col justify-between" key={ id }>
+      <figure>
+        <img
+          className="object-cover sm:h-96 xl:h-112 w-full"
+          src={image_url}
+          alt={name}
+        />
+        <h1 className="text-2xl my-2">{name}</h1>
+        <p>
+          {breed} - {age ? `${age} old` : 'age unknown'}
+        </p>
+      </figure>
       <div className="grid grid-cols-2 mt-4">
         <Link
           to={`/dogs/${id}`}

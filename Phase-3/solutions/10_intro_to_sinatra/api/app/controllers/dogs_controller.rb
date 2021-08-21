@@ -1,5 +1,12 @@
 class DogsController < ApplicationController
   
+  get "/dogs" do 
+    Dog.all.to_json(methods: :age)
+  end
+
+  post "/dogs" do 
+    Dog.create(dog_params).to_json
+  end
 
   private 
 

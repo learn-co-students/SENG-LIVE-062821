@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './shared/Navbar';
 import DogsContainer from './dogs/DogsContainer';
 import WalksContainer from './walks/WalksContainer';
@@ -19,7 +14,6 @@ function App() {
         <Route path="/walks">
           <WalksContainer />
         </Route>
-        <Redirect to="/dogs" />
       </Switch>
     </Router>
   );
