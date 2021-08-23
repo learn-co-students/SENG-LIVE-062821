@@ -33,6 +33,8 @@ In this lecture, we'll be covering the following topics:
 
 ### API endpoints
 
+### Model Methods
+
 ### State Changes
 
 ### Rendering Logic/Updates
