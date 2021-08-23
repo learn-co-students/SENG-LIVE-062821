@@ -1,0 +1,94 @@
+/* ./src/index.css */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.h-112 {
+  height: 28rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:h-112 {
+    height: 28rem;
+  }
+}
+@media (min-width: 768px) {
+  .md\:h-112 {
+    height: 28rem;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:h-112 {
+    height: 28rem;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:h-112 {
+    height: 28rem;
+  }
+}
+@media (min-width: 1536px) {
+  .\32xl\:h-112 {
+    height: 28rem;
+  }
+}
+
+.h-128 {
+  height: 32rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:h-128 {
+    height: 32rem;
+  }
+}
+@media (min-width: 768px) {
+  .md\:h-128 {
+    height: 32rem;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:h-128 {
+    height: 32rem;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:h-128 {
+    height: 32rem;
+  }
+}
+@media (min-width: 1536px) {
+  .\32xl\:h-128 {
+    height: 32rem;
+  }
+}
+
+.h-144 {
+  height: 36rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:h-144 {
+    height: 36rem;
+  }
+}
+@media (min-width: 768px) {
+  .md\:h-144 {
+    height: 36rem;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:h-144 {
+    height: 36rem;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:h-144 {
+    height: 36rem;
+  }
+}
+@media (min-width: 1536px) {
+  .\32xl\:h-144 {
+    height: 36rem;
+  }
+}
