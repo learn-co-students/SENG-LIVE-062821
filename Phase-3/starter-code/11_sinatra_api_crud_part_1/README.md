@@ -21,9 +21,9 @@ In this lecture, we'll be covering the following topics:
 - Student Exercise in Breakouts 
   - Add ability to edit dogs and see the edited result in the dogs index view
   - Add ability to delete dogs (from the main /dogs route). Ask for confirmation first, then remove the Dog from the database and also from the index view.
-  Advanced
-  - Navigate to the edit view via one of the pencil icon links. Refresh the page - where did the form data go? Make sure the form data for the dog you're editing populates even on a page refresh.
-  - Try adding a couple of dog walks for a dog and then deleting the dog, what happens? Remember to check the terminal running `rake server` and/or to use `binding.pry` to get feedback about what's happening. Fix the issue. 
+  - **Advanced**
+    - Navigate to the edit view via one of the pencil icon links. Refresh the page - where did the form data go? Make sure the form data for the dog you're editing populates even on a page refresh.
+    - Try adding a couple of dog walks for a dog and then deleting the dog, what happens? Remember to check the terminal running `rake server` and/or to use `binding.pry` to get feedback about what's happening. Fix the issue. 
   
 ## Feature Checklist
 
