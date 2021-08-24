@@ -1,0 +1,19 @@
+ENV["SINATRA_ENV"] ||= "development"
+
+# loads up our code and database configuration
+require_relative './config/environment'
+# loads our rake tasks for interacting with the db
+require 'sinatra/activerecord/rake'
+
+desc "Start our app console"
+task :console do
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  Pry.start
+end
+
+# adds a task we can use to start our local development web server that will run on http://localhost:9292
+desc "Start our server"
+task :server do
+  exec "rerun -b 'rackup config.ru'"
+end 
+
