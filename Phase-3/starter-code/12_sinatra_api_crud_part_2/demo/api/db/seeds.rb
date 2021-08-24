@@ -25,7 +25,7 @@ dogs_attributes = [
     name: "Chop",	
     birthdate: Date.new(2020, 7, 31),
     breed:	"German Shorthaired Pointer",
-    image_url: "https://www.pets4homes.co.uk/images/classifieds/2015/10/29/1121968/large/liver-gsp-dog-pup-563218eef01c1.jpeg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822267/cdbd77592e3ef91e8cc1cf67d936f94f_fkozjt.jpg"
   },
   {
     name: "Baron",	
@@ -49,49 +49,49 @@ dogs_attributes = [
     name: "DJ", 
     birthdate: 2.years.ago,
     breed: "Dachsund Mix",
-    image_url: "https://pet-uploads.adoptapet.com/3/7/d/365758759.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822169/365758759_qyupo8.jpg"
   },
   {
     name: "Winter",
     birthdate: 9.years.ago,
     breed: "Husky Mix",
-    image_url: "https://pet-uploads.adoptapet.com/c/d/d/561229495.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822144/561229495_lldnll.jpg"
   },
   {
     name: "CeCe",
     birthdate: 3.years.ago,
     breed: "Lab mix",
-    image_url: "https://ny-petrescue.org/files/_cache/ee7eee7ee62c9c2b053e65dc9c9e1a55.JPG"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629821709/ee7eee7ee62c9c2b053e65dc9c9e1a55_iwjweh.jpg"
   },
   {
     name: "Kane",
     birthdate: 1.year.ago,
     breed: "Terrier Mix",
-    image_url: "https://ny-petrescue.org/files/_cache/06f5445919c408cb57e174b5ed726a66.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629821681/2_lu9ccw.jpg"
   },
   {
     name: "Nutmeg",
     birthdate: 4.months.ago,
     breed: "Lab Mix",
-    image_url: "https://ny-petrescue.org/files/_cache/7487afba690331e10f7e63e3e4473191.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822016/Nutmegupdate97_kyqlqo.jpg"
   },
   {
     name: "Sadie",
     birthdate: 8.months.ago,
     breed: "Lab/Terrier Mix",
-    image_url: "https://ny-petrescue.org/files/_cache/55860f51e40159e2c34766352b214c36.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822095/55860f51e40159e2c34766352b214c36_g3plyx.jpg"
   },
   {
     name: "Sal",
     birthdate: 2.years.ago,
     breed: "Lab Mix",
-    image_url: "https://ny-petrescue.org/files/_cache/83c97c9fe7d2d82ce90c1d8ca9fde44c.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822067/83c97c9fe7d2d82ce90c1d8ca9fde44c_zckdjy.jpg"
   },
   {
     name: "Sinton",
     birthdate: 2.years.ago,
     breed: "Terrier Mix",
-    image_url: "https://ny-petrescue.org/files/_cache/6752121299098441fc9e7510b2945963.jpeg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629821474/4_bbgw1p.jpg"
   },
   {
     name: "Cupcake",
@@ -103,19 +103,18 @@ dogs_attributes = [
     name: "Luci",
     birthdate: 2.years.ago,
     breed: "Samoyed",
-    image_url: "https://i.imgur.com/f6p9jE2.jpeg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822371/f6p9jE2_acndnl.jpg"
   },
   {
     name: "Simon",
     birthdate: Date.new(2015, 8, 23),
     breed: "Shiba Inu",
-    image_url: "https://i.postimg.cc/hvZrjrpW/B3-FAF888-5656-4746-BE22-597185404078.jpg"
+    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822438/B3-FAF888-5656-4746-BE22-597185404078_bpbvvs.jpg"
   },
   {
     name: "Snoopy",
     birthdate: Date.new(1990,1,1),
     breed: "Snooop",
-    image_url: "http://www.peanuts.com/sites/default/files/sn-color.jpg"
   },
 ]
 

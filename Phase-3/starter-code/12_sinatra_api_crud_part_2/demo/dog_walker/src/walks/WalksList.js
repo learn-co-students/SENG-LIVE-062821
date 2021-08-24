@@ -1,9 +1,16 @@
 import React from 'react'
+import WalkListItem from './WalkListItem'
 
-function WalksList() {
+function WalksList({ walks, setWalks }) {
+
+  
   return (
     <div>
-      <h1>Walks List</h1>
+      <ul className="space-y-4">
+        {walks.map((walk) => (
+          <WalkListItem walk={walk} setWalks={setWalks} />
+        ))}
+      </ul>
     </div>
   )
 }
