@@ -1,0 +1,40 @@
+# Gemfile 
+source 'http://rubygems.org'
+
+# rack-contrib gives us access to Rack::JSONBodyParser allowing Sinatra (which is built on Rack) to parse requests whose body is in JSON format
+gem 'rack-contrib', '~> 2.3', :require => 'rack/contrib'
+# sinatra-cross_origin allows our Sinatra API to respond to cross-origin requests
+gem 'sinatra-cross_origin'
+
+# these should be familiar from before. Allow us to set up our sqlite3 database with activerecord and sinatra.
+gem 'activerecord', '~> 6.1'
+gem 'sinatra-activerecord'
+gem 'rake'
+
+gem 'require_all'
+gem 'sqlite3'
+
+# thin is a basic web server that Sinatra can use to respond to http requests
+gem 'thin'
+
+
+# bcrypt is a gem used to encrypt user passwords so that they are not stored in plain text within the database.
+gem 'bcrypt'
+
+
+group :development, :test do 
+  # you know about pry at this point, used to allow us to stop our code while it's running for debugging purposes.
+  gem 'pry'
+  # rerun gives us a command we can use in the terminal to start the local development server (like npm start for react) that will autoreload the server process whenever we change our code so we don't need to restart the server whenever we make a change.
+  gem 'rerun'
+  # tux adds a command called `tux` that has access to all of our classes (similar to what we did with rake console manually)
+  gem 'tux'
+end
+
+# these gems are specialized for testing our application.
+group :test do
+  gem 'rspec'
+  gem 'capybara' # for feature tests
+  gem 'rack-test'
+  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git' # for resetting the test database before and after the test suite runs
+end
