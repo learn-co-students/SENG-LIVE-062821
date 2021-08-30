@@ -65,18 +65,16 @@ function fetchAllPokemon(){
 
 //GET One
 function showPokemon(id){
-  console.log(id)
+  
   fetch(`http://localhost:3000/pokemon/${id}`)
   .then(res => res.json())
   .then(json => {
-    document.querySelector('#pokemon-container').innerHTML =  renderPokemonDetail(json)
-
+    document.querySelector('#pokemon-container').innerHTML = renderPokemonDetail(json)
     document.querySelector('#pokemon-container form').addEventListener('submit', (event) => {
       event.preventDefault()
       json.moves.push(event.target.moves.value)
       document.querySelector('#moves-list').textContent = json.moves.join(' ')
     })
-
   })
 }
 
