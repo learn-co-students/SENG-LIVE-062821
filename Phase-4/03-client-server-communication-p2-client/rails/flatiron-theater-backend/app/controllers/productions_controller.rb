@@ -11,8 +11,15 @@ class ProductionsController < ApplicationController
     end 
 
     def create
-        production = Production.create(production_params)
+        production = Production.create!(production_params)
         render json: production, status: :created
+        rescue ActiveRecord::RecordInvalid => invalid 
+        render json: {errors: invalid.record.errors.full_messages}
+        # if production.valid?
+        #     render json: production, status: :created
+        # else
+        #     render json:{error: production.errors.full_messages}
+        # end 
     end 
 
     def update
