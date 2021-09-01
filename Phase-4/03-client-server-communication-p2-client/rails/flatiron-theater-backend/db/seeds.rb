@@ -1,0 +1,13 @@
+Production.destroy_all
+CrewMember.destroy_all
+
+Production.create(title: 'Carmen', genre:'Opera', budget: 80000.00, image:'https://images.pexels.com/photos/3087907/pexels-photo-3087907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940', director:'Beatrix Steadman', ongoing:true, description: " set in southern Spain and tells the story of the downfall of Don José, a naïve soldier who is seduced by the wiles of Carmen. José abandons his childhood sweetheart and deserts from his military duties, yet loses Carmen's love to the glamorous torero Escamillo." )
+Production.create(title: 'Cats' , genre:'Musical', budget:50000.00 , image:'https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' , director:'Imran Keeling' , ongoing:true, description:"Cats is a sung-through musical composed by Andrew Lloyd Webber, based on the 1939 poetry collection Old Possum's Book of Practical Cats by T. S. Eliot. It tells the story of a tribe of cats called the Jellicles and the night they make the 'Jellicle choice' by deciding which cat will ascend to the Heaviside layer and come back to a new life."  )
+Production.create(title:'Hamilton' , genre:'Musical' , budget:100000.00 , image:'https://images.pexels.com/photos/6896187/pexels-photo-6896187.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' , director: 'Martha Tang', ongoing:false, description: "Hamilton: An American Musical is a sung-and-rapped-through musical by Lin-Manuel Miranda. It tells the story of American Founding Father Alexander Hamilton." )
+Production.create(title: 'Hamlet', genre:'Shakespearean' , budget:70000.00 , image: 'https://images.pexels.com/photos/1270184/pexels-photo-1270184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940', director: 'Donna Costa' , ongoing:false, description: "Hamlet is considered among the most powerful and influential works of world literature, with a story capable of 'seemingly endless retelling and adaptation by others'")
+
+CrewMember.create(name:'Argos Annabel', job_title:'Production Manager', salary: 75000.00, production:Production.all.sample)
+CrewMember.create(name:'Gopinath Michaela', job_title:'Casting Assistant', salary: 45000.00, production:Production.all.sample)
+CrewMember.create(name:'Colleen Irvine', job_title:'Costume Designer', salary: 65000.00, production:Production.all.sample)
+CrewMember.create(name:'Črt Ejiroghene', job_title:'Sound Designer', salary: 65000.00, production:Production.all.sample)
+puts 'done'
