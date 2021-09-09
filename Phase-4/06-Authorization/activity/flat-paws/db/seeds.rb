@@ -1,0 +1,5 @@
+Shelter.create(location:"seattle", name:"Seattles Flat-paws", capacity:50)
+Pet.create(breed:'cat', name:'rose', weight: 13, age:6, gps_chip:true, shelter:Shelter.first)
+Pet.create(breed:'cat', name:'bubbles', weight: 8, age:2, gps_chip:true, shelter:Shelter.first)
+Pet.create(breed:'cat', name:'ted', weight: 9, age:10, gps_chip:true, shelter:Shelter.first)
+Pet.create(breed:'cat', name:'luke', weight: 10, age:3, gps_chip:true, shelter:Shelter.first)
