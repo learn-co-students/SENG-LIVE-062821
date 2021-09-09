@@ -1,0 +1,2 @@
+class CrewMembersController < ApplicationController
+end

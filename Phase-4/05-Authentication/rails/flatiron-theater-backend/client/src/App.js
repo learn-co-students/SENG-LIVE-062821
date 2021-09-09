@@ -5,9 +5,13 @@ import ProductionContainer from './components/ProductionContainer'
 import ProductionForm from './components/ProductionForm'
 import Navigation from './components/Navigation'
 import ProductionDetail from './components/ProductionDetail'
+import Auth from './components/Auth'
+import Login from './components/LogIn'
+
 function App() {
   const [productions, setProductions] = useState([])
   const [errors, setErrors] = useState(false)
+  const [cart, setCart] = useState([])
 
   useEffect(() => {
     fetch('/productions')
@@ -34,7 +38,7 @@ function App() {
 
   return (
     <>
-    <Navigation/>
+    <Navigation cart={cart}/>
     <Switch>
     <Route exact path="/">
       <ProductionContainer productions={productions}/>
@@ -43,7 +47,13 @@ function App() {
       <ProductionForm handlePost={handlePost} errors={errors} />
     </Route>
     <Route exact path="/productions/:id">
-        <ProductionDetail  />
+        <ProductionDetail cart={cart} setCart={setCart}/>
+    </Route>
+    <Route path="/sign_up">
+          <Auth />
+    </Route>
+    <Route path="/login">
+          <Login />
     </Route>
     </Switch>
     </>
